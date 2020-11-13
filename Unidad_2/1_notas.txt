@@ -1,0 +1,67 @@
+=========================== CREAR UN PROYECTO EN ANGULAR D ====================
+    utilizar el comando: ng new MyApp (después cambiarle el nombre <<MyApp>>)
+
+
+
+========================== INCIAR UN PROYECTO =======================
+    utilizando el comando: ng serve -o
+        NOTA: -o -> para que se abra una nueva ventana en el navegador
+
+
+========================= CREAR COMPONENTES DE FORMA MANUAL ======================
+        - 1. Dentro de la carpeta src/app crear una nueva carpeta llamada components
+        - 2. Dentro de components crear una carpeta con el nombre del componente ejemplo-> "header"
+        - 3. Dentro de esa carpeta crear un archivo html y un archivo typescript con la nomenclatura
+                nombreComponente.component.html y nombreComponente.component.ts
+                EJEMPLO: header.component.ts y header.component.html
+            NOTA: Esto es opcional pero es para llevar una nomenclatura estandarizada
+        ** .html -> en este archivo se escribe todo el codigo html del componente 
+        ** .ts -> dentro de este archivo se escribe la clase que hará parte del funcionamiento
+                  del componente
+            NOTA: la clase del arhivo .ts del componente debe contener la palabra "export"
+                  para que esta clase de typescript pueda ser utilizada en otro documento
+        
+        - 4. En el archivo de "app.module.ts" se importa el componente, utilizando el comando   
+             "ng-import" para escribir el path y el nombre de la clase.
+        - 5. En ese mismo archivo dentro de "declarations" se pone el nombre de la clase
+        - 6. Para utilizar el componente (que se vea visualmente), se utliza la etiqueta 
+             con el nombre del componente la cual está especificada dentro del "selector"
+             en el archivo .ts del componente
+                EJEMPLO (dentro del archivo app.component.ts):
+                    <app-navbar></app-navbar>
+
+=========================== CREAR COMPONENTES DE FORMA AUTOMATICA ========================= 
+        1. Crear una carpeta llamada components dentro de la carpeta "src/app"
+        2. Abrir la carpeta de app dentro de la terminal 
+        3. Escribir el comando:
+            ng generate component components/nombreComponente 
+                SIMPLIFICADO -> ng g c components/nombreComponente
+                NOTA: se puede añadir -is (para quitar la hoja de estilos) y --skipTests=true(para crear 
+                sin archivo de testeo (spec))
+
+             
+========================== UTILIZAR PROPIEDADES DE UNA CLASE EN ARCHIVO HTML ====================
+        1. para utilizar las propiedades o variables o funciones que estan dentro de las clases
+        en el archivo html se hace referencia a ella mediante llaves
+         ejemplo {{ nombreVariable }}
+        2. Cuando se quiere que un evento sea por medio de angular se pone entre [] 
+            EJEMPLO: [click] = "expresion"
+
+        
+======================= DIRECTIVAS ESTRUCTURALES *ng-if y *ng-for ==============
+        ----- *ng-if: permite mostrar u ocultar elementos 
+              se utiliza en el elemento html que se quiere mostrar u ocultar
+              recibe valores TRUE/FALSE
+                TRUE: muestra
+                FALSE: oculta
+        ----- *ng-for: permite repetir elementos html a partir de un arreglo o elemento iterable
+                se utiliza en el elemento que se quiere repetir, por ejemplo, en una lista (ul)
+                 se utilizaria en un item (li) para que este se repetiera y mostrara los elementos
+                 de un arreglo por medio de una lista
+                 EJEMPLO:
+                  <ul class="list-group">
+                     <li *ngFor="let item of personajes; let i = index" class="list-group-item">{{i}} {{item}}</li>
+                  </ul>
+                NOTA: i (index) es la posicion en el arreglo
+
+
