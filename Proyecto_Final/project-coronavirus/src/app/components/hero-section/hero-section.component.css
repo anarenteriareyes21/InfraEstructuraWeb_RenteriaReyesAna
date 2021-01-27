@@ -1,0 +1,116 @@
+
+
+.hero__img{
+    width: 700px;
+}
+
+.hero__title{
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+.hero__subtitle{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hero__paragraph{
+    font-size: 18px;
+}
+
+.hero__btn{
+    border: none;
+    border-radius: 5px;
+    padding: 5px 30px;
+}
+
+.hero__btn:hover{
+    background-color: #f58d8d;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+
+/* what it is section */
+
+.leftContainer img{
+    width: 95%;
+}
+
+.rightContainer{
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.rightContainer img{
+    align-self: center;
+    width: 100px;
+}
+
+.rightContainer p{
+    font-size: 18px;
+    line-height: 1.8rem;
+}
+
+.rightContainer .counter{
+    /* border: 1px solid; */
+    border-radius: 17px;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 25px;
+    box-shadow: 5px 0px 21px -5px rgba(0, 0, 0, 0.2);
+    background: url(../../../assets/img/bg-counter_1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.rightContainer .counter .recuperados{
+    color: #6EB7AC;
+}
+
+.counter .muertes{
+    color: #F07171;
+}
+
+.counter .recuperados small, .counter .casos small, .counter .muertes small{
+    color: #4B4B4B;
+    font-size: 13px;
+}
+
+.rightContainer .counter div{
+    /* border: 1px solid; */
+}
+
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  
+    .hero__title{
+        font-size: 65px;
+    }
+    .hero__img{
+        width: 100%;
+    }
+    .hero__subtitle{
+        font-size: 30px;
+    }
+    .hero__paragraph{
+        width: 85%;
+    }
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+    
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+  
+}
+ 

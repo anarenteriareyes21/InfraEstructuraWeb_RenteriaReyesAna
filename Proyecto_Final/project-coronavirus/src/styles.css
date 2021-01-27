@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+/* ================ CUSTOM GLOBAL CLASES =========== */
+.color_custom_word{
+    color: #F07171;
+}
+
+.weight_custom_word{
+    font-weight: bold;
+}
+
+.btn-custom{
+    background-color: #F07171;
+    color: #fff;
+    border-radius: 15px;
+}
+
+.invalidCampo{
+    background-color: rgba(0, 0, 0, 0.1);
+    
+}
